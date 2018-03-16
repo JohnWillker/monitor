@@ -51,17 +51,17 @@ services:
     networks:
       - back-tier
 
-  ecs-explorer:
-    image: slok/ecs-explorer
-    ports:
-      - 9222:9222
-    environment:
-      - AWS_ACCESS_KEY_ID=<>
-      - AWS_SECRET_ACCESS_KEY=<>
-    aws.region:
-      - sa-east-1
-    networks:
-      - back-tier
+    #  ecs-explorer:
+    #image: slok/ecs-explorer
+    #ports:
+    #  - 9222:9222
+    #environment:
+    #  - AWS_ACCESS_KEY_ID=<>
+    #  - AWS_SECRET_ACCESS_KEY=<>
+    #aws.region:
+    #  - sa-east-1
+    #networks:
+    #  - back-tier
 
 
 
