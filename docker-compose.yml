@@ -26,6 +26,7 @@ services:
       - cadvisor:cadvisor
       - alertmanager:alertmanager
       - metrics:metrics
+      - ecs-explorer:ecs-explorer
     depends_on:
       - cadvisor
     networks:
@@ -49,6 +50,18 @@ services:
       - GITHUB_TOKEN:01bf88077f0d21615b21c518196c51c483abf309
     networks:
       - back-tier
+
+    #  ecs-explorer:
+    #image: slok/ecs-explorer
+    #ports:
+    #  - 9222:9222
+    #environment:
+    #  - AWS_ACCESS_KEY_ID=<>
+    #  - AWS_SECRET_ACCESS_KEY=<>
+    #aws.region:
+    #  - sa-east-1
+    #networks:
+    #  - back-tier
 
 
 
@@ -107,7 +120,7 @@ services:
     depends_on:
       - prometheus
     ports:
-      - 3000:3000
+      - 80:3000
     volumes:
       - grafana_data:/var/lib/grafana
       - ./grafana/provisioning/:/etc/grafana/provisioning/
