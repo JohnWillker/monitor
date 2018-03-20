@@ -45,8 +45,8 @@ services:
       - 9171:9171
     image: infinityworks/github-exporter:latest
     environment:
-      - REPOS:'JohnWillker/removeWhitespaceInfile'
-      - GITHUB_TOKEN='01bf88077f0d21615b21c518196c51c483abf309'
+      - REPOS:JohnWillker/removeWhitespaceInfile
+      - GITHUB_TOKEN:01bf88077f0d21615b21c518196c51c483abf309
     networks:
       - back-tier
 
