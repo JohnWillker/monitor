@@ -61,6 +61,11 @@ scrape_configs:
       - 'tasks.node-exporter'
       type: 'A'
       port: 9100
+<<<<<<< HEAD
+=======
+
+  - job_name: 'metrics'
+>>>>>>> 96d1f7e60c4161c9af83c6a2a7dec9bc7862c706
 
   - job_name: 'metrics'
     # Override the global default and scrape targets from this job every 5 seconds.
@@ -70,6 +75,7 @@ scrape_configs:
       - 'tasks.metrics'
       type: 'A'
       port: 9171
+<<<<<<< HEAD
 #     static_configs:
 #          - targets: ['node-exporter:9100']
 #
@@ -82,3 +88,13 @@ scrape_configs:
 #      - 'tasks.ecs-exporter'
 #      type: 'A'
 #      port: 9222
+=======
+
+  - job_name: 'ecs-exporter'
+    scrape_interval: 5s
+    dns_sd_configs:
+    - names:
+      - 'tasks.ecs-exporter'
+      type: 'A'
+      port: 9222
+>>>>>>> 96d1f7e60c4161c9af83c6a2a7dec9bc7862c706
