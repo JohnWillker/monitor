@@ -9,13 +9,3 @@ providers:
   editable: true
   options:
     path: /etc/grafana/provisioning/dashboards
-
-providers:
- - name: 'CloudWatch'
-   orgId: 1
-   folder: ''
-   type: file
-   disableDeletion: false
-   editable: true
-   options:
-   path: /etc/grafana/provisioning/dashboards
